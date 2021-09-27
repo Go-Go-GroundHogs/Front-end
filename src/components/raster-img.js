@@ -24,7 +24,7 @@ const RasterImg = ({src}) => {
   );
 
   const image = data.allFile.edges.find(
-    edge => edge.node.name === src).node.childImageSharp.fluid;
+    edge => edge.node.name === src)?.node?.childImageSharp?.fluid;
 
   return <Img Tag="div" alt={src} fluid={image} />
 }

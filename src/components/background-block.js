@@ -33,7 +33,7 @@ const BackgroundBlock = (props) => {
     );
 
   const image = data.allFile.edges.find(
-    edge => edge.node.name === fileName).node.childImageSharp.fluid;
+    edge => edge.node.name === fileName)?.node?.childImageSharp?.fluid;
 
   return(
     <BackgroundImage
