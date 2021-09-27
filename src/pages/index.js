@@ -4,6 +4,7 @@ import React from "react"
 import BackgroundBlock from "../components/background-block"
 import CallToAction from "../components/call-to-action"
 import CallToActionBanner from "../components/call-to-action-banner"
+import Carousel3D from "../components/carousel-3d"
 import ContentBlock from "../components/content-block"
 import EmailForm from "../components/email-form"
 import Layout from "../components/layout"
@@ -21,53 +22,21 @@ import GentlemansClubMDX from "../content/gentlemans-club"
 import RoadmapMDX from "../content/roadmap"
 import TeamMDX from "../content/team"
 
+const CAROUSEL_IMAGES = [
+  '241180858_210173591097713_3254127091026144355_n.jpg',
+  '242413246_198117819082822_2512234783661161239_n.png',
+  '242662278_351131996792436_3164517192214611283_n.png',
+  '242662684_556932562187658_793506315002072693_n.png',
+  '242690115_389067659501615_205551625228433586_n.png',
+  '242877457_159365253038369_8722042843496788759_n.png'
+]
+
 const SECTIONS = [
   { id: "intro",
     subSections: [
       {
-        component: TextImgSection,
-        attr: {markdown: IntroMDX, img: "4-small", hColors: ['#FF99CC', '#8FAADC']}
-      },
-      {
-        component: CallToActionBanner,
-        attr: {
-          id: "buy-on-open-sea-2",
-          className: "blue-bg",
-          text: <h2>MINT OUR HAREMS GIRLS NOW <br />COLLECTION ON OPEN SEA</h2>,
-          cta: <Button href="https://mint.harems.io/" variant="primary" enabled><h1>Mint Now</h1></Button>
-        }
-      }
-    ]
-  },
-  { id:"info1",
-    subSections: [
-      {
-        component: TextImgSection,
-        attr: {markdown: Info1MDX, img: "8-small", hColors: ['#FFFF00', '#FFC000']}
-      }
-    ]
-  },
-  { id:"types",
-    subSections: [
-      {
-        component: TextImgSection,
-        attr: {markdown: TypesMDX, img: "Rarity types", hColors: ['#8FAADC'], imgType:"wideRightImg"}
-      }
-    ]
-  },
-  { id:"live-girls",
-    subSections: [
-      {
-        component: TextImgSection,
-        attr: {markdown: LiveGirlsMDX, img: "Live Girls", hColors: ['#C709C7'], imgType: "markdownImg"}
-      }
-    ]
-  },
-  { id:"benefactors",
-    subSections: [
-      {
-        component: TextImgSection,
-        attr: {markdown: BenefactorsMDX, img: "Benefactors", hColors: ['#FFC000'], imgType: "markdownImg"}
+        component: Carousel3D,
+        attr: { images: CAROUSEL_IMAGES }
       }
     ]
   },
@@ -101,7 +70,10 @@ const HomePage = () => {
   return (
     <Layout light title="Harems">
       <BackgroundBlock className="d-flex justify-content-center" src="home-bg" minHeight="100vh">
-        <CallToAction imgLeft={"241180858_210173591097713_3254127091026144355_n"} text={CallToActionMDX} imgRight={"241180858_210173591097713_3254127091026144355_n"} />
+        <CallToAction
+          imgLeft={"Groundhog Profile"}
+          imgRight={"Groundhog Scope"}
+          markdown={CallToActionMDX} />
       </BackgroundBlock>
       <CallToActionBanner className="black-bg border-bottom border-top" text={<h1>Get the Latest</h1>} cta={<EmailForm id="top-email-form" hideLabel />} ctaFirst />
       <Container fluid className="black-bg pt-4 px-4 text-left">

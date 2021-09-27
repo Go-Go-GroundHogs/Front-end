@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from "react"
-
+import styled from "@emotion/styled"
 const RasterImg = ({src}) => {
 
   const data = useStaticQuery(
@@ -13,7 +13,7 @@ const RasterImg = ({src}) => {
               name
               childImageSharp {
                 fluid(quality: 90, maxWidth: 1920) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -26,7 +26,12 @@ const RasterImg = ({src}) => {
   const image = data.allFile.edges.find(
     edge => edge.node.name === src)?.node?.childImageSharp?.fluid;
 
-  return <Img Tag="div" alt={src} fluid={image} />
+  const NewImg = styled(Img)`
+    img {
+      /* position: static !important; */
+    }
+  `;
+  return <NewImg Tag="div" alt={src} fluid={image} />
 }
 
 export default RasterImg;
