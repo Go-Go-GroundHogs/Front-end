@@ -2,12 +2,16 @@ import { Button, Container } from "react-bootstrap"
 import React from "react"
 
 import BackgroundBlock from "../components/background-block"
+import CallToAction from "../components/call-to-action"
+import CallToActionBanner from "../components/call-to-action-banner"
 import ContentBlock from "../components/content-block"
 import EmailForm from "../components/email-form"
 import Layout from "../components/layout"
+import RasterImg from "../components/raster-img"
 import TextImgSection from "../components/text-img-section"
-import CallToActionBanner from "../components/call-to-action-banner"
 
+
+import CallToActionMDX from "../content/call-to-action"
 import IntroMDX from "../content/intro"
 import Info1MDX from "../content/info1"
 import TypesMDX from "../content/types"
@@ -95,17 +99,9 @@ const SECTIONS = [
 
 const HomePage = () => {
   return (
-    <Layout dark title="Harems">
-      <BackgroundBlock className="align-items-end d-flex justify-content-center" src="home-bg-lounge" minHeight="90vh">
-
-        <CallToActionBanner
-          id="buy-on-open-sea-1"
-          className="blue-bg"
-          text={<h2>MINT OUR HAREMS GIRLS NOW <br />COLLECTION ON OPEN SEA</h2>}
-          cta={<Button href="https://mint.harems.io/" variant="primary" enabled><h1>Mint Now</h1></Button>}
-        />
-        {/**/}
-
+    <Layout light title="Harems">
+      <BackgroundBlock className="d-flex justify-content-center" src="home-bg" minHeight="100vh">
+        <CallToAction imgLeft={"241180858_210173591097713_3254127091026144355_n"} text={CallToActionMDX} imgRight={"241180858_210173591097713_3254127091026144355_n"} />
       </BackgroundBlock>
       <CallToActionBanner className="black-bg border-bottom border-top" text={<h1>Get the Latest</h1>} cta={<EmailForm id="top-email-form" hideLabel />} ctaFirst />
       <Container fluid className="black-bg pt-4 px-4 text-left">

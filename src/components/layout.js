@@ -13,12 +13,12 @@ const Layout = ({ dark, title, children }) => {
 
   return (
     <div style={styles}>
-      <Container fluid className="px-0 theme-light app-container">
+      <Container fluid className="px-0 theme-light app-container w-100">
         <Helmet>
           <title>{title}</title>
         </Helmet>
         <Header />
-        <main role={"main"} style={{height: "auto"}}>
+        <main role={"main"} style={{height: "auto", width: "100%"}}>
           {children}
         </main>
         <Footer />
