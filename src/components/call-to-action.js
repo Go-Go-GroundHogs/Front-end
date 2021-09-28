@@ -15,6 +15,7 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
     padding: 10px;
 
     h2 {
+      color: #ffffff;
       padding-bottom: 10px;
       text-transform: uppercase;
     }
@@ -29,13 +30,26 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
     }
   `;
 
+  const Wrapper = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+
+    h1 {
+      color: green;
+    }
+  `;
+
   const Markdown = markdown;
 
   return (
-    <div id={id} className="d-flex flex-column align-items-center justify-content-center w-100" style={{height: "100vh"}}>
-      <Row className="align-items-center d-flex justify-content-center text-center w-100">
+    <Wrapper id={id}>
+      <Row className="align-items-center d-flex justify-content-center mb-4 text-center w-100">
         <Col>
-          <h1>Gogo Groundhogs</h1>
+          <h1>Gogo<br />Groundhogs</h1>
         </Col>
       </Row>
       <Row className="align-items-center d-flex justify-content-center text-center w-100">
@@ -45,8 +59,7 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
         </ColoredCol>
         <ImgCol sm="3"><RasterImg src={imgRight} alt="Groundhog Image" /></ImgCol>
       </Row>
-    </div>
-
+    </Wrapper>
   )
 }
 
