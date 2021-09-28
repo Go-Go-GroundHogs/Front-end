@@ -1,10 +1,21 @@
 $light-color: white;
-$primary-font-family: "Times New Roman";
+$dark-color: black;
+$primary-font-family: sans-serif;
 $secondary-font-family: "Avenir Next";
 
 .app-container {
   // max-width: 1200px;
   margin: 0 auto;
+}
+
+.black-bg {
+  background-color: #000000;
+  color: white;
+}
+
+.blue-bg {
+  background-color: #00B0F0;
+  color: white;
 }
 
 .brand-pink {
@@ -19,18 +30,48 @@ $secondary-font-family: "Avenir Next";
   text-align: center;
 }
 
-.black-bg {
-  background-color: #000000;
-  color: white;
+.feature-set {
+  display: flex;
+  flex-direction: column;
 }
 
-.blue-bg {
-  background-color: #00B0F0;
-  color: white;
+.feature-set > * {
+  background: linear-gradient(90deg ,#11ffbd, #aaffa9);
+  border-radius: 8px;
+  border: 1px solid #4a4a10;
+  padding: 10px;
+  margin-top: 40px;
+  width: 85%;
+  // -webkit-box-orient: vertical;
+  // -webkit-box-direction: normal;
+}
+
+.feature-set > *:nth-child(even) {
+  align-self: flex-end;
+}
+
+.main-content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .content-block {
+    width: 80%;
+  }
+
+  @media(max-width:768px) {
+    .content-block {
+      width: 95%;
+    }
+  }
 }
 
 .no-child-margin > * {
   margin: 0;
+}
+
+.orange-bg {
+  background: linear-gradient(180deg,#f2f9f8,#e4be78)
 }
 
 .text-small {
