@@ -11,6 +11,7 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
     border-radius: 8px;
     color: #ffffff;
     margin: 20px;
+    min-width: 300px;
     padding: 10px;
 
     h2 {
@@ -31,13 +32,20 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
   const Markdown = markdown;
 
   return (
-    <Row id={id} className="align-items-center d-flex justify-content-center position-absolute text-center w-100" style={{height: "100vh"}}>
-      <ImgCol sm="3"><RasterImg src={imgLeft} alt="Groundhog Image" /></ImgCol>
-      <ColoredCol className="col-8" md="3">
-        <Markdown />
-      </ColoredCol>
-      <ImgCol sm="3"><RasterImg src={imgRight} alt="Groundhog Image" /></ImgCol>
-    </Row>
+    <div id={id} className="d-flex flex-column align-items-center justify-content-center w-100" style={{height: "100vh"}}>
+      <Row className="align-items-center d-flex justify-content-center text-center w-100">
+        <Col>
+          <h1>Gogo Groundhogs</h1>
+        </Col>
+      </Row>
+      <Row className="align-items-center d-flex justify-content-center text-center w-100">
+        <ImgCol sm="3"><RasterImg src={imgLeft} alt="Groundhog Image" /></ImgCol>
+        <ColoredCol className="col-8" md="3">
+          <Markdown />
+        </ColoredCol>
+        <ImgCol sm="3"><RasterImg src={imgRight} alt="Groundhog Image" /></ImgCol>
+      </Row>
+    </div>
 
   )
 }

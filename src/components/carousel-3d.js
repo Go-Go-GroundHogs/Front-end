@@ -8,11 +8,8 @@ import RasterImg from "../components/raster-img"
 
 export const Carousel3D = ({images}) => {
   const [goToSlide, setGoToSlide] = useState(0)
-  const [offsetRadius, setOffsetRadius] = useState(2)
+  const [offsetRadius, setOffsetRadius] = useState(3)
   const [showNavigation, setShowNavigation] = useState(false)
-  // const [config, setConfig] = useState(config.gentle)
-
-  // const config = { mass: 1, tension: 120, friction: 14, frequency: 2 }
 
   const slides = images.map((image, i) => {
     return {
@@ -22,24 +19,28 @@ export const Carousel3D = ({images}) => {
     }
   })
 
-  // const onChangeInput = e => {
-  //   this.setState({
-  //     [e.target.name]: parseInt(e.target.value, 10) || 0
-  //   });
-  // };
+  const CarouselWrapper = styled.div`
+    height: 500px;
+    margin: 0 auto;
+    width: 80%;
 
-    return (
-      <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
-        <Carousel
-          slides={slides}
-          goToSlide={goToSlide}
-          offsetRadius={offsetRadius}
-          showNavigation={showNavigation}
-          animationConfig={config.gently}
-          autoPlay={false}
-          interval={3}
-        />
-      </div>
+    img {
+      border: white solid 5px;
+    }
+  `;
+
+  return (
+    <CarouselWrapper>
+      <Carousel
+        slides={slides}
+        goToSlide={goToSlide}
+        offsetRadius={offsetRadius}
+        showNavigation={showNavigation}
+        animationConfig={config.gently}
+        autoPlay={false}
+        interval={3}
+      />
+    </CarouselWrapper>
   )
 }
 
