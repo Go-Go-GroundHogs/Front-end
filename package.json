@@ -1,5 +1,5 @@
 {
-  "name": "harems-io-front-end",
+  "name": "gogo groundhogs front end",
   "private": true,
   "description": "some info, and forms for referrals and contact",
   "version": "0.1.13",
@@ -35,7 +35,6 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-spring": "^9.2.4",
-    "react-spring-3d-carousel": "^1.2.1",
     "react-spring-3d-carousel-2": "^1.0.1",
     "sass": "^1.37.5",
     "uuid": "^8.3.2"
@@ -45,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nresh/harems-io-front-end"
+    "url": "https://github.com/nresh/go-go-groundhogs-front-end"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
