@@ -40,7 +40,15 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
 
     h1 {
       color: green;
+      display: block;
     }
+
+    @media(max-width:768px) {
+      h1 {
+        display: none !important;
+      }
+    }
+
   `;
 
   const Markdown = markdown;

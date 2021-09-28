@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from "react"
 import styled from "@emotion/styled"
+
 const RasterImg = ({src}) => {
 
   const data = useStaticQuery(

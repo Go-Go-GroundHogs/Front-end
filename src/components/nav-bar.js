@@ -3,9 +3,18 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const NavBar = () => {
-  // const Logo = styled.img`
-  //   height: 70px;
-  // `;
+  const Logo = styled.div`
+    /* height: 70px; */
+    display: none;
+
+    h1 {
+      color: green;
+    }
+
+    @media(max-width:768px) {
+      display: block !important;
+    }
+  `;
 
   const UpperLink = styled(Nav.Link)`
     font-weight: 500;
@@ -34,17 +43,13 @@ const NavBar = () => {
 
   return (
     <DarkBar className="px-3 p-xl-0" collapseOnSelect fixed="top" expand="lg" variant="dark">
-        {/*<Navbar.Brand href="/" className="d-contents py-0">
-          <Logo
-            src={""}
-            className=""
-            alt="Logo"
-          />
-        </Navbar.Brand>*/}
+        <Navbar.Brand href="/" className="d-contents py-0" style={{flex: 1}}>
+          <Logo className="" alt="Logo"><h1>Gogo<br />Groundhogs</h1></Logo>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <NavLinkArea className="justify-content-between" id="responsive-navbar-nav">
           <Nav id="home-nav">
-            <UpperLink href="/#about">About</UpperLink>
+            <UpperLink href="/#intro">About</UpperLink>
             <UpperLink href="/#benefits">Benefits</UpperLink>
             <UpperLink href="/#roadmap">Roadmap</UpperLink>
           </Nav>

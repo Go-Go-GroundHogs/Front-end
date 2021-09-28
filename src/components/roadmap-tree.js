@@ -17,7 +17,7 @@ const RoadmapTree = () => {
     color: #ffffff;
     display:flex;
     justify-content: center;
-    padding:0;
+    padding:0 !important;
 
     h3 {
       background-color: #de9100;
@@ -51,47 +51,40 @@ const RoadmapTree = () => {
   `;
 
   const RoadmapWrapper = styled.div`
-  .row:nth-child(even) {
-    margin-right: 12px;
-  }
-  .row:nth-child(odd) {
-    margin-left: 12px;
-  }
-    .row:nth-child(even) .col:nth-child(1) {
+    .row:nth-child(even) {
+      margin-right: -4px;
+    }
+    .row:nth-child(odd) {
+      margin-right: 0px;
+    }
+    .row:nth-child(even) div[class*="col-"]:nth-child(1) {
       border-right: 2px dashed #4a4a10;
     }
-
-    .row:nth-child(odd) .col:nth-child(2) {
+    .row:nth-child(odd) div[class*="col-"]:nth-child(2) {
       border-left: 2px dashed #4a4a10;
     }
-
-
-    .row:nth-child(odd) .col:nth-child(1) {
+    .row:nth-child(odd) div[class*="col-"]:nth-child(1) {
       div:nth-of-type(2) {
         border-top: 2px dashed #4a4a10;
       }
     }
-
-    .row:nth-child(even) .col:nth-child(2) {
+    .row:nth-child(even) div[class*="col-"]:nth-child(2) {
       div:nth-of-type(1) {
         border-top: 2px dashed #4a4a10;
       }
     }
-
-
-
   `;
 
   return (
     <RoadmapWrapper>
       {
         ROADMAP_STEPS.map((step, i) => {
-          const heading = <HeadingCol xs={3}>
+          const heading = <HeadingCol xs={3} sm={6}>
                             <div />
                             <h3>{`${step.pct}% sold`}</h3>
                             <div />
-                          </HeadingCol >
-          const desc = <DescCol xs={9}><p>{step.text}</p></DescCol>
+                          </HeadingCol>
+          const desc = <DescCol xs={9} sm={6}><p>{step.text}</p></DescCol>
 
           const leftEl = i % 2 ? desc : heading
           const rightEl = i % 2 ? heading : desc
