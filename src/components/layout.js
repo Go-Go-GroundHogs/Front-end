@@ -5,10 +5,9 @@ import Footer from "./footer"
 import Header from "./header"
 import React from "react"
 
-const Layout = ({ dark, title, children }) => {
+const Layout = ({ title, children }) => {
   const styles = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black"
+    background: "linear-gradient(180deg,#f2f9f8,#e4be78)"
   };
 
   return (
