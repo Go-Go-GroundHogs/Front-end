@@ -3,9 +3,9 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const NavBar = () => {
-  const Logo = styled.img`
-    height: 70px;
-  `;
+  // const Logo = styled.img`
+  //   height: 70px;
+  // `;
 
   const UpperLink = styled(Nav.Link)`
     font-weight: 500;

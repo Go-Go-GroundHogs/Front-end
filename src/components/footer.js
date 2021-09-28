@@ -1,12 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap"
 import React from "react"
 
-import styled from "@emotion/styled"
+// import styled from "@emotion/styled"
 
 const Footer = ({ children }) => {
-  const Logo = styled.img`
-    max-width: 200px;
-  `
+  // const Logo = styled.img`
+  //   max-width: 200px;
+  // `
 
   return (
       <Container fluid="sm">

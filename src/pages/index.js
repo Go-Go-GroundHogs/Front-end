@@ -1,11 +1,10 @@
-import { Button, Container } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import React from "react"
 
 import BackgroundBlock from "../components/background-block"
 import CallToAction from "../components/call-to-action"
 import ContentBlock from "../components/content-block"
 import Layout from "../components/layout"
-import RasterImg from "../components/raster-img"
 
 import BenefitsMDX from "../content/benefits"
 import CallToActionMDX from "../content/call-to-action"

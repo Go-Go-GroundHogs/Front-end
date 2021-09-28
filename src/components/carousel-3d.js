@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-spring-3d-carousel-2";
 import { v4 as uuidv4 } from 'uuid';
 import { config } from "react-spring";
-import styled from "@emotion/styled"
-
-import RasterImg from "../components/raster-img"
+// import styled from "@emotion/styled"
 
 const CAROUSEL_IMAGES = [
   '241180858_210173591097713_3254127091026144355_n.jpg',
@@ -20,7 +18,7 @@ const INTERVAL_SECONDS = 3
 
 export const Carousel3D = () => {
   const [goToSlide, setGoToSlide] = useState(0)
-  const [autoPlay, setAutoPlay] = useState(true)
+  // const [autoPlay, setAutoPlay] = useState(true)
 
   const slides = CAROUSEL_IMAGES.map((image, i) => {
     return {
@@ -38,7 +36,7 @@ export const Carousel3D = () => {
         offsetRadius={SLIDE_OFFSET}
         showNavigation={false}
         animationConfig={CONFIG}
-        autoPlay={autoPlay}
+        autoPlay={true}
         interval={INTERVAL_SECONDS}
       />
     </div>
