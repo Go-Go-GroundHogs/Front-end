@@ -55,8 +55,8 @@ const NavBar = () => {
           </Nav>
           <Nav id="social-links" className="ml-5">
             <UpperLink href="https://t.me/"><i className="fa fa-telegram" aria-hidden="true"></i></UpperLink>
-            <UpperLink href="https://discord.gg/"><i className="fa fa-discord-alt social-icon pr-lg-0"></i></UpperLink>
-            <UpperLink href="https://twitter.com/"><i className="fa fa-twitter social-icon pr-lg-0"></i></UpperLink>
+            <UpperLink href="https://discord.gg/tPuTaurhfV"><i className="fa fa-discord-alt social-icon pr-lg-0"></i></UpperLink>
+            <UpperLink href="https://twitter.com/GoGoGroundhogs"><i className="fa fa-twitter social-icon pr-lg-0"></i></UpperLink>
           </Nav>
         </NavLinkArea>
     </DarkBar>
