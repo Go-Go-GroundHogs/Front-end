@@ -1,0 +1,112 @@
+body {
+  font-size: 20px;
+}
+
+a, button, div, h1, h2, p, ul {
+  font-family: $primary-font-family;
+}
+
+h1, h2 {
+  color: $dark-color;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h2 {
+  color: $dark-color;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+hr {
+  border-top: 1px solid #707070;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em
+  }
+  h2 {
+    font-size: 1em
+  }
+}
+
+// bootstrap overrides
+.btn-primary.disabled {
+  background-color: black;
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: #115f98;
+  border: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+}
+
+.form-control {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.form-group {
+  padding: 0;
+}
+
+.form-label {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link{
+      color: $light-color;
+    }
+    .nav-link:focus, .nav-link:hover {
+      color: rgba(255,255,255,.75);
+    }
+  }
+  .navbar-toggler {
+    color: $light-color;
+    border-color: $light-color;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='#{$light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+// for react-spring-3d-carousel
+// (using @emotion.styled broke the carousel for some reason and so I have to do
+// override in old school way)
+.carousel-wrapper {
+  height: 500px;
+  margin: -100px auto;
+  width: 80%;
+
+  img {
+    border: black solid 2px;
+    padding: 5px;
+    cursor: pointer;
+  }
+}
