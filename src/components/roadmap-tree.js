@@ -25,6 +25,10 @@ const RoadmapTree = () => {
       margin: 0 5px;
       padding: 10px;
       min-width: 120px;
+
+      @media (max-width: 400px) {
+        min-width: auto;
+      }
     }
 
     div {
@@ -82,8 +86,12 @@ const RoadmapTree = () => {
     <RoadmapWrapper>
       {
         ROADMAP_STEPS.map((step, i) => {
-          const heading = <HeadingCol><div /><h3>{`${step.pct}% sold`}</h3><div /></HeadingCol>
-          const desc = <DescCol><p>{step.text}</p></DescCol>
+          const heading = <HeadingCol xs={3}>
+                            <div />
+                            <h3>{`${step.pct}% sold`}</h3>
+                            <div />
+                          </HeadingCol >
+          const desc = <DescCol xs={9}><p>{step.text}</p></DescCol>
 
           const leftEl = i % 2 ? desc : heading
           const rightEl = i % 2 ? heading : desc
