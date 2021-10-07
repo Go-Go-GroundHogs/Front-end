@@ -3,8 +3,8 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const NavBar = () => {
-  const Logo = styled.div`
-    /* height: 70px; */
+  const Logo = styled.img`
+    height: 70px;
     display: none;
 
     h1 {
@@ -44,7 +44,10 @@ const NavBar = () => {
   return (
     <DarkBar className="px-3 p-xl-0" collapseOnSelect fixed="top" expand="lg" variant="dark">
         <Navbar.Brand href="/" className="d-contents py-0" style={{flex: 1}}>
-          <Logo className="" alt="Logo"><h1>Gogo<br />Groundhogs</h1></Logo>
+          <Logo className=""
+            src={"Groundhog Logo Small.png"}
+            alt="Gogo Groundhogs Logo"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <NavLinkArea className="justify-content-between" id="responsive-navbar-nav">
@@ -52,6 +55,7 @@ const NavBar = () => {
             <UpperLink href="/#intro">About</UpperLink>
             <UpperLink href="/#benefits">Benefits</UpperLink>
             <UpperLink href="/#roadmap">Roadmap</UpperLink>
+            <UpperLink href="/#team">Team</UpperLink>
           </Nav>
           <Nav id="social-links" className="ml-5">
             <UpperLink href="https://t.me/"><i className="fa fa-telegram" aria-hidden="true"></i></UpperLink>
