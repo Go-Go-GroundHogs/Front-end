@@ -21,16 +21,15 @@ const ImgSection = ({ markdown, img, smallImage = false, useImgTag = false, chil
  }
 
   const StyledRow = styled(Row)`
-
   `;
 
   return (
-    <StyledRow className="sub-block justify-content-center pb-4" >
-      <Col lg={5}>
+    <StyledRow className="justify-content-center sub-block pb-4" >
+      <Col lg={smallImage ? 6 : 6}>
         { Markdown && <Markdown />}
         { children }
       </Col>
-      <Col lg={smallImage ? 3 : 5} className="d-flex flex-column justify-content-center offset-lg-1 mt-3">
+      <Col lg={smallImage ? 3 : 5} className="d-flex flex-column justify-content-center offset-lg-1 mt-3 mt-md-0">
         <Image src={img} alt={img} />
       </Col>
     </StyledRow>
