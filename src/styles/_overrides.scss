@@ -101,12 +101,18 @@ ul {
 // override in old school way)
 .carousel-wrapper {
   height: 500px;
-  margin: -100px auto;
+  margin: -25px auto;
   width: 80%;
 
   img {
     border: black solid 2px;
     padding: 5px;
     cursor: pointer;
+    max-width: 350px;
+
+    @media(max-width:768px) {
+      max-width: 300px;
+    }
+
   }
 }
