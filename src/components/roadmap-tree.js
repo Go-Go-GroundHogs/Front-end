@@ -25,6 +25,8 @@ const RoadmapTree = () => {
       margin: 0 5px;
       padding: 10px;
       min-width: 120px;
+      text-align: center;
+      z-index: 1;
 
       @media (max-width: 400px) {
         min-width: auto;
@@ -71,6 +73,12 @@ const RoadmapTree = () => {
     .row:nth-child(even) div[class*="col-"]:nth-child(2) {
       div:nth-of-type(1) {
         border-top: 2px dashed #4a4a10;
+      }
+    }
+
+    @media (max-width: 600px) {
+      div  {
+        border-top: none !important;
       }
     }
   `;
