@@ -5,7 +5,7 @@ import RasterImg from "./raster-img"
 
 import styled from "@emotion/styled"
 
-const ImgSection = ({ markdown, img, useImgTag = false, children }) => {
+const ImgSection = ({ markdown, img, smallImage = false, useImgTag = false, children }) => {
   const Markdown = markdown;
 
   let Image = styled(RasterImg)`
@@ -24,13 +24,13 @@ const ImgSection = ({ markdown, img, useImgTag = false, children }) => {
 
   `;
 
-
   return (
     <StyledRow className="sub-block justify-content-center pb-4" >
       <Col lg={5}>
-        <Markdown />
+        { Markdown && <Markdown />}
+        { children }
       </Col>
-      <Col lg={6} className="d-flex flex-column justify-content-center offset-lg-1 mt-3">
+      <Col lg={smallImage ? 3 : 5} className="d-flex flex-column justify-content-center offset-lg-1 mt-3">
         <Image src={img} alt={img} />
       </Col>
     </StyledRow>

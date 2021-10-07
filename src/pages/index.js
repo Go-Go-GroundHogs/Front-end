@@ -47,8 +47,7 @@ const SECTIONS = [
   { id: "team",
   subSections: [
     {
-      component: ImgSection,
-      attr: { markdown: TeamMDX, img: "Groundhog Terminator NFTs" }
+      component: TeamMDX
     }
   ]
   }
