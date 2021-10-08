@@ -4,11 +4,11 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const ROADMAP_STEPS = [
-  { pct: 0, text: "250 Groundhog Day NFTs will be reserved specifically for giveaways to Discord members! One Groundhog Day NFT will be airdropped to 10 of our earliest Discord members." },
-  { pct: 10, text: "Groundhog Day Discord server will be revamped and updated to facilitate top-notch communication in our community. Rarity tools and listing will be added and updated." },
-  { pct: 25, text: "One Groundhog Day NFT will be airdropped to 5 lucky winners who were early minters!" },
-  { pct: 50, text: "Ten lucky minters will be airdropped 1 Groundhog Day NFT. Official Groundhog Day merchandise store will be launched – full of limited edition plushies, t-shirts, hoodies, and various other fun goodies! Community members will be eligible to vote on a 1 ETH donation to a charity of the community’s choosing." },
-  { pct: 75, text: "An additional 5 lucky minters will be airdropped 1 Groundhog Day NFT." },
+  { pct: 0, text: "250 Genesis GoGo Groundhog NFTs will be reserved specifically for giveaways to Discord members! One Genesis GoGo Groundhog NFT will be airdropped to 10 of our earliest Discord members." },
+  { pct: 10, text: "The GoGo Groundhog Discord server will be revamped and updated to facilitate top-notch communication in our community. Rarity tools and listing will be added and updated." },
+  { pct: 25, text: "One Genesis GoGo Groundhog Collection NFT will be airdropped to 5 lucky winners who were early minters!" },
+  { pct: 50, text: "Ten lucky minters will be airdropped 1 Genesis GoGo Groundhog Collection NFT. Official Genesis GoGo Groundhog Collection merchandise store will be launched – full of limited edition plushies, t-shirts, hoodies, and various other fun goodies! Community members will be eligible to vote on a 1 ETH donation to a charity of the community’s choosing." },
+  { pct: 75, text: "An additional 5 lucky minters will be airdropped 1 Genesis GoGo Groundhog Collection NFT." },
   { pct: 100, text: "Groundhog holders will receive 30% APR interest on their NFTs from the original mint price - in the form of a DAI! This means if you spend $1000, you get back $300 in the form of DAI, straight to the wallet where your Groundhogs are! We will also begin work on a 3D collection, as well as the possibility of a Groundhogs game with the help of the community!" },
 ]
 
@@ -25,6 +25,8 @@ const RoadmapTree = () => {
       margin: 0 5px;
       padding: 10px;
       min-width: 120px;
+      text-align: center;
+      z-index: 1;
 
       @media (max-width: 400px) {
         min-width: auto;
@@ -71,6 +73,12 @@ const RoadmapTree = () => {
     .row:nth-child(even) div[class*="col-"]:nth-child(2) {
       div:nth-of-type(1) {
         border-top: 2px dashed #4a4a10;
+      }
+    }
+
+    @media (max-width: 600px) {
+      div  {
+        border-top: none !important;
       }
     }
   `;

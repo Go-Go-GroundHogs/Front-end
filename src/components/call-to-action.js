@@ -10,8 +10,10 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
     border: 1px solid #4a4a10;
     border-radius: 8px;
     color: #ffffff;
-    margin: 20px;
-    min-width: 300px;
+    /* margin: 20px; */
+    margin: 0 auto;
+    margin-top: 30px !important;
+    /* min-width: 300px; */
     padding: 10px;
 
     h2 {
@@ -24,7 +26,25 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
     }
   `;
 
+  const LogoCol = styled(Col)`
+  > * {
+    margin: 0px auto;
+    max-width: 250px;
+    /* width: 30%; */
+  }
+
+    @media(max-width:768px) {
+      display: none;
+    }
+  `;
+
   const ImgCol = styled(Col)`
+    img {
+      background-color: white;
+      border: black solid 2px;
+      padding: 5px;
+    }
+
     @media(max-width:768px) {
       display: none;
     }
@@ -55,16 +75,16 @@ const CallToAction = ({ id, className, imgLeft, imgRight, markdown }) => {
 
   return (
     <Wrapper id={id}>
-      <Row className="align-items-center d-flex justify-content-center mb-4 text-center w-100">
-        <Col>
-          <h1>Gogo<br />Groundhogs</h1>
-        </Col>
-      </Row>
       <Row className="align-items-center d-flex justify-content-center text-center w-100">
         <ImgCol sm="3"><RasterImg src={imgLeft} alt="Groundhog Image" /></ImgCol>
-        <ColoredCol className="col-8" md="3">
-          <Markdown />
-        </ColoredCol>
+        <Col className="col-10 mx-5" sm="6" md="3">
+          <Row className="flex-column align-items-center">
+            <LogoCol><RasterImg src="Groundhog Logo" alt="Go-go Groundhogs Logo" /></LogoCol>
+            <ColoredCol>
+              <Markdown />
+            </ColoredCol>
+          </Row>
+        </Col>
         <ImgCol sm="3"><RasterImg src={imgRight} alt="Groundhog Image" /></ImgCol>
       </Row>
     </Wrapper>

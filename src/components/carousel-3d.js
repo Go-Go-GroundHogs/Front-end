@@ -5,12 +5,13 @@ import { config } from "react-spring";
 // import styled from "@emotion/styled"
 
 const CAROUSEL_IMAGES = [
-  '241180858_210173591097713_3254127091026144355_n.jpg',
-  '242413246_198117819082822_2512234783661161239_n.png',
-  '242662278_351131996792436_3164517192214611283_n.png',
-  '242662684_556932562187658_793506315002072693_n.png',
-  '242690115_389067659501615_205551625228433586_n.png',
-  '242877457_159365253038369_8722042843496788759_n.png'
+  'image0.jpg',
+  'image1.jpg',
+  'image2.jpg',
+  'image3.jpg',
+  'image4.jpg',
+  'image5.jpg',
+  'image6.jpg'
 ]
 const CONFIG = config.gently
 const SLIDE_OFFSET = 2

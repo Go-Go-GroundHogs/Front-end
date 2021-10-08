@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
 ## Live Demo of Site (hosted on AWS Amplify)
-https://main.dqlawzyoy6p51.amplifyapp.com
+https://dreamy-babbage-4dbe7e.netlify.app/
 
 ## Usage for running Gatsby App locally
 
