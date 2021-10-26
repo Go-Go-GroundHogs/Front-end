@@ -9,7 +9,7 @@ const ROADMAP_STEPS = [
   { pct: 25, text: "One Genesis GoGo Groundhog Collection NFT will be airdropped to 5 lucky winners who were early minters!" },
   { pct: 50, text: "Ten lucky minters will be airdropped 1 Genesis GoGo Groundhog Collection NFT. Official Genesis GoGo Groundhog Collection merchandise store will be launched – full of limited edition plushies, t-shirts, hoodies, and various other fun goodies! Community members will be eligible to vote on a 1 ETH donation to a charity of the community’s choosing." },
   { pct: 75, text: "An additional 5 lucky minters will be airdropped 1 Genesis GoGo Groundhog Collection NFT." },
-  { pct: 100, text: "Groundhog holders will receive 30% APR interest on their NFTs from the original mint price - in the form of a DAI! This means if you spend $1000, you get back $300 in the form of DAI, straight to the wallet where your Groundhogs are! We will also begin work on a 3D collection, as well as the possibility of a Groundhogs game with the help of the community!" },
+  { pct: 100, text: "Genesis GoGo Groundhog Collection holders will receive 30% APR interest on their NFTs from the original mint price - in the form of a DAI! This means if you spend $1000, you get back $300 in the form of DAI, straight to the wallet where your Groundhogs are!" },
 ]
 
 const RoadmapTree = () => {
